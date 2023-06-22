@@ -5,18 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Bootstrap Admin</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/styles/style.css"/>
+        <link rel="stylesheet" href="assets/styles/css/style.css"/>
     </head>
     <body id="home">
         <header class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
             <nav class="container-fluid">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
+                <ul class="navbar-nav" id="app">
+                    <li v-if="home === true" class="active nav-item">
                         <a class="nav-link" href="index.html">
                             Home
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li v-else class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li v-if="users === true" class="active nav-item">
+                        <a class="nav-link" href="users.html">
+                            Users
+                        </a>
+                    </li>
+                    <li v-else class="nav-item">
                         <a class="nav-link" href="users.html">
                             Users
                         </a>
@@ -53,4 +63,5 @@
 
         </footer>
     </body>
+    <script type="module" src="assets/js/index.js"></script>
 </html>
